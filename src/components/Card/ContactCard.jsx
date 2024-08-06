@@ -10,9 +10,9 @@ const ContactCard = () => {
         <div className="flex gap-10 justify-between items-center w-full flex-wrap">
           <div className="w-full bg-[#1C1C1C] px-8 py-5 rounded-lg sm:w-[40%] md:w-[40%] lg:w-[40%] xl:w-[40%]">
             <Input
-              label="FullName"
+              label="שם מלא"
               type="text"
-              placeholder="Type here"
+              placeholder="הקלד פה"
               id="FullName"
               name="FullName"
               autoComplete="off"
@@ -20,9 +20,9 @@ const ContactCard = () => {
           </div>
           <div className="w-full bg-[#1C1C1C] px-8 py-5 rounded-lg sm:w-[40%] md:w-[40%] lg:w-[40%] xl:w-[40%]">
             <Input
-              label="Email"
+              label="אימייל"
               type="text"
-              placeholder="Type here"
+              placeholder="הקלד פה"
               id="email"
               name="email"
               autoComplete="off"
@@ -31,7 +31,7 @@ const ContactCard = () => {
         </div>
         <div className="bg-[#1C1C1C] px-8 rounded-lg w-full font-spartan">
           <label className="block text-white py-5 text-base xsm:text-xl sm:text-2xl">
-            Why are you contacting us?
+            למה אתה יוצר איתנו קשר?
           </label>
           <div>
             <div className="flex justify-between w-[85%] flex-wrap items-center">
@@ -40,16 +40,14 @@ const ContactCard = () => {
                   type="checkbox"
                   className="form-checkbox  bg-[#1e1e1e] border-[#333] focus:outline-none"
                 />
-                <span className="ml-2 text-white">UI/UX Design</span>
+                <span className="ml-2 text-white">עיצוב UI/UX</span>
               </div>
               <div className="flex items-center mb-4 mr-4">
                 <input
                   type="checkbox"
                   className="form-checkbox  bg-[#1e1e1e] border-[#333] focus:outline-none"
                 />
-                <span className="ml-2 text-white">
-                  Quality Assurance & Testing
-                </span>
+                <span className="ml-2 text-white">אבטחת איכות ובדיקות</span>
               </div>
             </div>
             <div className="flex justify-between w-[85%] flex-wrap items-center">
@@ -58,27 +56,25 @@ const ContactCard = () => {
                   type="checkbox"
                   className="form-checkbox bg-[#1e1e1e] border-[#333] focus:outline-none"
                 />
-                <span className="ml-2 text-white">UI dase/UX Design</span>
+                <span className="ml-2 text-white">UI dase/UX עיצוב</span>
               </div>
               <div className="flex items-center mb-4 sm:mr-4">
                 <input
                   type="checkbox"
                   className="form-checkbox bg-[#1e1e1e] border-[#333] focus:outline-none"
                 />
-                <span className="ml-2 text-white">
-                  Quality Assurance & Testing
-                </span>
+                <span className="ml-2 text-white">אבטחת איכות ובדיקות</span>
               </div>
             </div>
           </div>
         </div>
         <div className="bg-[#1C1C1C] px-8 rounded-lg w-full font-spartan">
           <label className="block text-white py-5  text-base xsm:text-xl sm:text-2xl">
-            Provide a brief description of your project
+            ספק תיאור קצר של הפרויקט שלך
           </label>
           <textarea
             id="description"
-            placeholder="Kindly share the details of your project here"
+            placeholder="אנא שתפו כאן את הפרטים של הפרויקט שלכם"
             className="w-full bg-[#1C1C1C] border-b border-[#333] text-white focus:outline-none outline:none"
           ></textarea>
         </div>
@@ -87,7 +83,7 @@ const ContactCard = () => {
             type="submit"
             className="py-2 px-8 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-full focus:outline-none"
           >
-            Submit
+            שלח
           </button>
         </div>
       </form>

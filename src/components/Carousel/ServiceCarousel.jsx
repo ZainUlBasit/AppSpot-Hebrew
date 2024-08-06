@@ -38,11 +38,11 @@ const ServiceCarousel = () => {
         <div className="flex flex-col items-end justify-center gap-y-3 w-[300px] sm:flex-wrap overflow-hidden h-[60vh]">
           <div className="flex flex-col gap-y-3 w-[250px] font-spartan">
             <h1 className="text-5xl font-bold gradient-text-link">
-              Our Services
+              השירותים שלנו
             </h1>
             <p className="pr-3">
-              Transform your brand with our innovative digital solutions that
-              captivate and engage your audience.
+              שנה את המותג שלך עם הפתרונות הדיגיטליים החדשניים שלנו שמושכים את
+              הקהל שלך ומשתפים אותם.
             </p>
           </div>
         </div>
@@ -89,6 +89,7 @@ const ServiceCarousel = () => {
               Icon={dt.icon}
               title={dt.title}
               img={dt.img}
+              desc={dt.desc}
             />
           ))}
         </Slider>

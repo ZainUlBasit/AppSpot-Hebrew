@@ -11,18 +11,9 @@ const CarouselCard = ({ Icon, title, img, desc, i }) => {
   };
 
   const cardStyle = {
-    backgroundImage:
-      title === "Web Development"
-        ? `url("/web1.png")`
-        : title === "App Development"
-        ? `url("/App.jpg")`
-        : title === "UI/UX Design"
-        ? `url("/ui.jpg")`
-        : "none",
     // backgroundImage: "img",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundColor: img ? "transparent" : "white",
     // borderImage:
     // "linear-gradient(90deg, rgba(255,95,109,1) 0%, rgba(255,195,113,1) 100%) 1",
     // borderWidth: "2px",
@@ -31,7 +22,7 @@ const CarouselCard = ({ Icon, title, img, desc, i }) => {
 
   return (
     <div
-      className="relative h-[300px] w-[250px] gap-3 rounded-[20px] overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-transform ease-in-out duration-1000 hover:transform hover:scale-110 cursor-pointer"
+      className="relative h-[300px] w-[250px] gap-3 rounded-[20px] overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-transform ease-in-out duration-1000 hover:transform hover:scale-110 cursor-pointer bg-custom-gradient"
       style={cardStyle}
       onMouseEnter={() => setIsActive(true)}
       onMouseLeave={() => setIsActive(false)}
@@ -39,19 +30,19 @@ const CarouselCard = ({ Icon, title, img, desc, i }) => {
       <div
         className={`overlay absolute top-0 left-0 w-full h-full ${
           isActive
-            ? "bg-[rgba(0,0,0,.6)]"
+            ? "bg-[rgba(0,0,0,.95)]"
             : isActive
-            ? "bg-[rgba(0,0,0,.4)]"
-            : "bg-[rgba(0,0,0,.5)]"
+            ? "bg-[rgba(0,0,0,.95)]"
+            : "bg-[rgba(0,0,0,.95)]"
         } z-1 fade-in`}
       ></div>
 
       <div
-        className={`absolute bottom-0 left-0 flex flex-col gap-y-2 justify-center items-center w-full transition-all ease-in-out duration-700 px-3 ${
+        className={`absolute bottom-0 left-0 flex flex-col gap-y-2 justify-center items-center w-full transition-all ease-in-out duration-700 px-3 bg-transparent ${
           isActive ? "py-10" : "py-4"
         }`}
       >
-        <Icon className={`text-3xl drop-shadow-lg`} style={gradientStyle} />
+        <img src="/IconContainer.png" className="w-[50px]" />
         <span
           className={`text-2xl font-bold font-spartan text-center `}
           style={gradientStyle}
@@ -60,7 +51,7 @@ const CarouselCard = ({ Icon, title, img, desc, i }) => {
         </span>
         {desc && (
           <span
-            className={`transition-all ease-in-out duration-[3s] text-center transform ${
+            className={`transition-all ease-in-out duration-[3s] text-center transform text-white text-sm  bg-transparent ${
               !isActive
                 ? "max-h-0 opacity-0 overflow-hidden"
                 : "max-h-[500px] opacity-100"

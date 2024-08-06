@@ -11,12 +11,11 @@ const Note = () => {
       <div className="absolute top-0 bottom-0 flex-col w-[100%] flex justify-center items-center font-spartan">
         <h1 className=" font-bold text-base xsm:text-lg sm:text-2xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-5xl text-white">
           {/* text-5xl  font-bold */}
-          Thank you for your Interest in AppSpot
+          תודה על התעניינותך ב-AppSpot
         </h1>
         <p className="w-[80%] text-sm xsm:text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl 2xl:text-3xl font-thin  text-white sm:w-[55%] md:w-[55%] lg:w-[55%] xl:w-[55%] 2xl:w-[55%]  text-center">
-          We would love to hear from you and discuss how we can help bring your
-          digital ideas to life. Here are the different ways you can get in
-          touch with us.
+          נשמח לשמוע ממך ולדון כיצד נוכל לעזור להגשים את הרעיונות הדיגיטליים
+          שלך. להלן הדרכים השונות שבהן תוכל ליצור איתנו קשר.
         </p>
       </div>
     </div>

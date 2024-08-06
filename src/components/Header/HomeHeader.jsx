@@ -18,19 +18,19 @@ const HomeHeader = () => {
           }}
           className="text-4xl lg:text-6xl xl:text-8xl md:text-7xl sm:text-5xl font-bold font-spartan "
         >
-          WHERE IDEAS
+          איפה רעיונות
         </div>
         <div className="text-2xl lg:text-4xl xl:text-7xl md:text-5xl sm:text-3xl  font-bold font-spartan">
-          CODE TO LIFE!
+          קוד לחיים!
         </div>
         <div className="max-w-[500px] text-center text-lg font-spartan">
-          At AppSpot, we are a team of passionate software developers who are
-          committed to delivering exceptional results.
+          ב-AppSpot, אנחנו צוות של מפתחי תוכנה נלהבים המחויבים לספק תוצאות
+          יוצאות דופן.
         </div>
       </div>
       <div className="relative inline-block p-[2px] rounded-full bg-gradient-to-r from-[#ff5f6d] to-[#ffc371] z-0">
         <button className="relative inline-block px-6 py-3 font-semibold text-white bg-black hover:bg-transparent rounded-full transition-all ease-in-out duration-500">
-          Get Started
+          צור קשר
         </button>
       </div>
       <img

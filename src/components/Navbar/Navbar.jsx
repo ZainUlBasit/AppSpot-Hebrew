@@ -40,18 +40,18 @@ const Navbar = () => {
           <img src={Logo} alt="Logo" className="h-12" />
         </a>
         <ul className="hidden text-xs md:flex justify-between items-center font-spartan">
-          <ListItem path="/" text="Home" />
+          {/* <ListItem path="/" text="Home" />
           <ListItem path="/services" text="Service" />
           <ListItem path="/aboutUs" text="About Us" />
-          <ListItem path="/portfolio" text="PORTFOLIO" />
+          <ListItem path="/portfolio" text="PORTFOLIO" /> */}
         </ul>
-        <a href="#contact" className="hidden md:inline-block">
+        {/* <a href="#contact" className="hidden md:inline-block">
           <button className="bg-[#333333] text-white py-2 px-4 sm:py-3 sm:px-7 rounded-full font-spartan font-bold flex justify-center items-center">
             Contact Us
           </button>
-        </a>
-        <input type="checkbox" id="openSidebarMenu" onChange={handleBurger} />
-        <label
+        </a> */}
+        {/* <input type="checkbox" id="openSidebarMenu" onChange={handleBurger} /> */}
+        {/* <label
           htmlFor="openSidebarMenu"
           className="sidebarIconToggle pr-4 md:hidden"
         >
@@ -120,7 +120,7 @@ const Navbar = () => {
               Contact Us
             </button>
           </li>
-        </ul>
+        </ul> */}
       </div>
     </nav>
   );

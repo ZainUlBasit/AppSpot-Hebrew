@@ -16,11 +16,11 @@ const Footer = () => {
               <img src={Logo} alt="Logo" className="h-12" />
             </a>
             <p className="mt-2">
-              At AppSpot, we are a team of passionate software developers who
-              are committed to delivering exceptional results.
+              ב-AppSpot, אנחנו צוות של מפתחי תוכנה נלהבים המחויבים לספק תוצאות
+              יוצאות דופן.
             </p>
           </div>
-          <div className="mb-8 md:mb-0 w-full px-6 sm:w-1/4">
+          {/* <div className="mb-8 md:mb-0 w-full px-6 sm:w-1/4">
             <h3 className="text-lg font-bold text-center sm:text-left">
               Quick Links
             </h3>
@@ -46,10 +46,10 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="w-full sm:w-4/12">
             <h3 className="text-lg font-bold text-center sm:text-left">
-              Reach Us
+              להשיג אותנו
             </h3>
             <ul className="mt-2 space-y-2 mx-auto w-[60%] sm:w-full">
               <li className="flex items-center gap-1">
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center border-t border-gray-500 pt-2">
-          <p>© 2023 Appspot.com.pk. All rights reserved.</p>
+          <p>© 2023 Appspot.com.pk. כל הזכויות שמורות.</p>
           <div className="flex space-x-4 text-main  ">
             <a href="#" className="hover:underline hover:text-white">
               <FaFacebookSquare />
