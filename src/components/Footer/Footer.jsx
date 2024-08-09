@@ -62,11 +62,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-1">
                 <a
-                  href="mailto:hello@appspot.com.pk"
+                  href="mailto:wa9575695@gmail.com"
                   className="hover:underline  flex items-center gap-2"
                 >
                   <FaRegMessage size={20} />
-                  hello@appspot.com.pk
+                  wa9575695@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-1">
