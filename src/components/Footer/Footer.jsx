@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 flex flex-col md:flex-row justify-between items-center border-t border-gray-500 pt-2">
-          <p>© 2023 Appspot.com.pk. כל הזכויות שמורות.</p>
+          <p>© 2023 Appspotsoftwares.com. כל הזכויות שמורות.</p>
           <div className="flex space-x-4 text-main  ">
             <a href="#" className="hover:underline hover:text-white">
               <FaFacebookSquare />
