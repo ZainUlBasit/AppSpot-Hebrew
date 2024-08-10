@@ -54,28 +54,11 @@ const Footer = () => {
             <ul className="mt-2 space-y-2 mx-auto w-[60%] sm:w-full">
               <li className="flex items-center gap-1">
                 <a
-                  href="https://wa.me/+923319042434"
-                  className="hover:underline flex items-center gap-2"
-                >
-                  <FaPhoneVolume size={20} /> +92 331 9042434
-                </a>
-              </li>
-              <li className="flex items-center gap-1">
-                <a
                   href="mailto:wa9575695@gmail.com"
                   className="hover:underline  flex items-center gap-2"
                 >
                   <FaRegMessage size={20} />
                   wa9575695@gmail.com
-                </a>
-              </li>
-              <li className="flex items-center gap-1">
-                <a
-                  href="https://maps.app.goo.gl/Y2HHu3cqX4M7Qe5c7"
-                  className="hover:underline  flex items-center gap-2"
-                >
-                  <FaLocationDot size={20} /> Office E14, Block B, Spinzar
-                  plaza, Arbab road Peshawar
                 </a>
               </li>
             </ul>
