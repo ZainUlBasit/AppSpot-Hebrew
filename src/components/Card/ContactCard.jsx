@@ -1,6 +1,49 @@
+import { useState } from "react";
 import Input from "../Inputs/Input";
+import { SendEmailContactUsAPI } from "../../axios";
 
 const ContactCard = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [purposeOfContact, setPurposeOfContact] = useState([]);
+  const [description, setDescription] = useState("");
+  const [Loading, setLoading] = useState(false);
+
+  const handleCheckboxChange = (event) => {
+    const { value, checked } = event.target;
+    setPurposeOfContact((prev) =>
+      checked ? [...prev, value] : prev.filter((item) => item !== value)
+    );
+  };
+
+  const handleSubmit = async (event) => {
+    setLoading(true);
+    event.preventDefault();
+    const formData = {
+      name: fullName,
+      sender_email: email,
+      reciever_email: "info@appspotsoftwares.com",
+      purpose: purposeOfContact,
+      desc: description,
+    };
+    console.log(formData);
+    // return;
+    try {
+      const response = await SendEmailContactUsAPI(formData);
+      console.log(response.data.data.msg);
+      if (response.data.success) {
+        // showEmailSuccessAlert(response.data.data.msg);
+        // Reset all state variables
+        setFullName("");
+        setEmail("");
+        setDescription("");
+        setPurposeOfContact([]);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+    setLoading(false);
+  };
   return (
     <div className="flex py-12 items-center justify-center bg-black">
       <form
@@ -16,6 +59,8 @@ const ContactCard = () => {
               id="FullName"
               name="FullName"
               autoComplete="off"
+              value={fullName}
+              onChange={(e) => setFullName(e.target.value)}
             />
           </div>
           <div className="w-full bg-[#1C1C1C] px-8 py-5 rounded-lg sm:w-[40%] md:w-[40%] lg:w-[40%] xl:w-[40%]">
@@ -26,6 +71,8 @@ const ContactCard = () => {
               id="email"
               name="email"
               autoComplete="off"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
         </div>
@@ -39,6 +86,8 @@ const ContactCard = () => {
                 <input
                   type="checkbox"
                   className="form-checkbox  bg-[#1e1e1e] border-[#333] focus:outline-none"
+                  value={"עיצוב UI/UX"}
+                  onChange={handleCheckboxChange}
                 />
                 <span className="ml-2 text-white">עיצוב UI/UX</span>
               </div>
@@ -55,6 +104,8 @@ const ContactCard = () => {
                 <input
                   type="checkbox"
                   className="form-checkbox bg-[#1e1e1e] border-[#333] focus:outline-none"
+                  value={"UI dase/UX עיצוב"}
+                  onChange={handleCheckboxChange}
                 />
                 <span className="ml-2 text-white">UI dase/UX עיצוב</span>
               </div>
@@ -62,6 +113,8 @@ const ContactCard = () => {
                 <input
                   type="checkbox"
                   className="form-checkbox bg-[#1e1e1e] border-[#333] focus:outline-none"
+                  value={"אבטחת איכות ובדיקות"}
+                  onChange={handleCheckboxChange}
                 />
                 <span className="ml-2 text-white">אבטחת איכות ובדיקות</span>
               </div>
@@ -76,11 +129,13 @@ const ContactCard = () => {
             id="description"
             placeholder="אנא שתפו כאן את הפרטים של הפרויקט שלכם"
             className="w-full bg-[#1C1C1C] border-b border-[#333] text-white focus:outline-none outline:none"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
         <div className="flex justify-center">
           <button
-            type="submit"
+            onClick={handleSubmit}
             className="py-2 px-8 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-full focus:outline-none"
           >
             שלח
