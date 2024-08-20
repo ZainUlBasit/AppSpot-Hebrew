@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../Inputs/Input";
 import { SendEmailContactUsAPI } from "../../axios";
+import ContactLoader from "../Loader/ContactLoader";
 
 const ContactCard = () => {
   const [fullName, setFullName] = useState("");
@@ -19,6 +20,11 @@ const ContactCard = () => {
   const handleSubmit = async (event) => {
     setLoading(true);
     event.preventDefault();
+    if (!fullName || !email || !purposeOfContact || !description) {
+      alert("Required Field are undefined!");
+      setLoading(false);
+      return;
+    }
     const formData = {
       name: fullName,
       sender_email: email,
@@ -30,9 +36,8 @@ const ContactCard = () => {
     // return;
     try {
       const response = await SendEmailContactUsAPI(formData);
-      console.log(response.data.data.msg);
       if (response.data.success) {
-        // showEmailSuccessAlert(response.data.data.msg);
+        alert(response.data.data.msg);
         // Reset all state variables
         setFullName("");
         setEmail("");
@@ -134,12 +139,16 @@ const ContactCard = () => {
           ></textarea>
         </div>
         <div className="flex justify-center">
-          <button
-            onClick={handleSubmit}
-            className="py-2 px-8 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-full focus:outline-none"
-          >
-            שלח
-          </button>
+          {Loading ? (
+            <ContactLoader />
+          ) : (
+            <button
+              onClick={handleSubmit}
+              className="py-2 px-8 bg-gradient-to-r from-orange-400 to-red-500 text-white rounded-full focus:outline-none"
+            >
+              שלח
+            </button>
+          )}
         </div>
       </form>
     </div>
